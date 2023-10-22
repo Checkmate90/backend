@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\marcasController;
+use App\Http\Controllers\TodoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +19,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("nombremarca",[marcasController::class, 'nombremarca']);
+Route::get("marcas", [TodoController::class, "TodasLasMarcas"]);
+
+Route::get("bodegas", [TodoController::class, "TodasLasBodegas"]);
+
+Route::get("dispositivos", [TodoController::class, "TodosLosDisp"]);
+
+Route::get("modelos", [TodoController::class, "TodosLosModelos"]);
+
+Route::get("existencias", [TodoController::class, "TodasLasExistencias"]);
+
+Route::get("todo", [TodoController::class, "TodaLaInfo"]);
