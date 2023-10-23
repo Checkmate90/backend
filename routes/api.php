@@ -30,3 +30,9 @@ Route::get("modelos", [TodoController::class, "TodosLosModelos"]);
 Route::get("existencias", [TodoController::class, "TodasLasExistencias"]);
 
 Route::get("todo", [TodoController::class, "TodaLaInfo"]);
+
+Route::post("crear", [TodoController::class, "CrearDispositivo"]);
+
+Route::post("editar", [TodoController::class, "EditarDispositivo"]);
+
+Route::post("eliminar", [TodoController::class, "EliminarDispositivo"]);
