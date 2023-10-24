@@ -36,3 +36,5 @@ Route::post("crear", [TodoController::class, "CrearDispositivo"]);
 Route::post("editar", [TodoController::class, "EditarDispositivo"]);
 
 Route::post("eliminar", [TodoController::class, "EliminarDispositivo"]);
+
+Route::get("modelos2", [TodoController::class, "ModelosPorMarca"]);

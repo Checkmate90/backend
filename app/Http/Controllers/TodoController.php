@@ -234,4 +234,12 @@ class TodoController extends Controller
         }
     }
 
+    public function ModelosPorMarca(Request $request){
+        $marca = $request["marca"];
+
+        return modelos::where("marcas_id",$marca)->get();
+
+        
+    }
+
 }
